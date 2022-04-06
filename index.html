@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./icons/app-favicon.ico" />
+
+    <!--Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>grabRecipes</title>
+  </head>
+  <body>
+    <!-- App Container Start -->
+    <div class="container app-container mt-4 mb-4 p-5">
+      <!-- App Heading Start -->
+      <header id="app-heading">
+        <div class="container heading-container mb-2">
+          <div class="row">
+            <div class="col-lg-12 text-center p-2">
+              <h1 class="app-name text-danger">
+                <img src="./icons/app-icon.png" class="app-icon" />
+                grab<span class="text-warning">Recipes</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- App Heading End -->
+
+      <!-- Main Section Start -->
+      <section id="main-section">
+        <div class="container main-container mt-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <!-- Search Form Container Start -->
+              <div class="container search-form-container mt-2 mb-2">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search Your Recipe..."
+                          aria-label="Search"
+                          aria-describedby="search"
+                        />
+                        <span
+                          class="input-group-text bg-warning text-white border-0"
+                          id="search"
+                          ><i class="fas fa-search"></i
+                        ></span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Search Form Container End -->
+
+              <!-- Search Result List Container Start -->
+              <div class="container search-result-list-container mt-2 mb-2">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="list-group search-result-list">
+                      <!--Message Container Start -->
+                      <div class="container message-container text-center">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <img
+                              src="./icons/emoji.png"
+                              alt="emoji"
+                              class="img-fluid message-image"
+                            />
+                            <p>Your search results will appear here</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Message Container End -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Search Result List Container End -->
+            </div>
+            <div class="col-lg-8">
+              <!-- Recipe Result Container Start-->
+              <div class="container recipe-result-container mt-2 mb-2 border">
+                <div class="row recipe-result-display">
+                  <div class="col-lg-12">
+                    <div
+                      class="home-image-container d-flex justify-content-center align-items-center"
+                      style="width: 100%"
+                    >
+                      <img
+                        src="./img/home-image.png"
+                        alt=""
+                        class="home-image img-fluid"
+                      />
+                    </div>
+                    <h3 class="text-center app-tagline">
+                      Love to <span class="text-warning">Eat</span> then learn
+                      to
+                      <span class="text-warning">Cook</span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Recipe Result Container End -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Main Section End -->
+
+      <!-- Footer Section Start -->
+      <footer id="footer">
+        <div class="container footer-container mt-3 text-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <p class="credits text-secondary">
+                Copyright &copy; <span id="year"></span>
+                <span
+                  >Designed & Developed by
+                  <span class="text-warning">Sujay</span></span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer Section End -->
+    </div>
+    <!-- App Container End -->
+
+    <!-- Custom JS -->
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
