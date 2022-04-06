@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600&display=swap");
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Baloo 2", cursive;
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* App Container */
+.app-container {
+  min-height: 800px; /* 94vh */
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.heading-container {
+  border-radius: 10px;
+  background: rgb(255, 244, 223);
+}
+
+/* Main Section */
+
+.main-container {
+  min-height: 500px;
+}
+
+.app-name,
+.app-tagline {
+  font-family: "Sansita Swashed", cursive;
+}
+
+.search-result-list .search-list-image,
+.search-result-list .message-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.search-result-list .search-list-error {
+  width: 40px;
+  height: 40px;
+}
+
+.search-result-list .list-group-item:hover {
+  background-color: rgb(255, 244, 223);
+}
+
+.list-group {
+  max-height: 480px;
+}
+
+.recipe-result-container {
+  min-height: 480px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-result-container .recipe-result-display {
+  max-height: 526px;
+}
+
+.recipe-result-container .recipe-image-container .recipe-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.recipe-result-container .recipe-result-display .icon {
+  width: 35px;
+  height: 35px;
+}
+
+.recipe-result-container .recipe-result-display .recipe-image-container {
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-result-container .recipe-result-display .ingredients-container {
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-result-container .recipe-result-display .health-facts-container {
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-result-container .recipe-result-display .summary:hover {
+  transform: translateY(5px);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+/* Customized Scrollbar */
+
+.list-group::-webkit-scrollbar,
+.recipe-result-display::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+  height: 0; /* height of the entire scrollbar */
+  background-color: #f5f5f5; /* color of the entire scrollbar */
+  border-radius: 10px;
+}
+.list-group::-webkit-scrollbar-track,
+.recipe-result-display::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* color of the tracking area */
+  border-radius: 10px;
+}
+.list-group::-webkit-scrollbar-thumb,
+.recipe-result-display::-webkit-scrollbar-thumb {
+  background-color: rgb(248, 174, 62);
+  border-radius: 10px;
+}
+
+/* Footer Section */
+.footer-container .credits {
+  font-size: 14px;
+}
