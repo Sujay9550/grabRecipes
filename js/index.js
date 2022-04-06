@@ -26,21 +26,18 @@ const getRecipes = async () => {
   try {
     const baseUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_Key}`;
     const response = await fetch(baseUrl);
-    console.log(response);
 
     if (!response.ok)
       throw new Error(`Something Went Wrong ${response.status}`);
 
     const data = await response.json();
-    console.log(data);
 
     if (data.hits.length === 0)
       throw new Error(`No Results Found For Your Query`);
 
     generateListHtml(data.hits);
   } catch (err) {
-    console.error(err.message);
-    console.log(`Something Went Wrong 🙁🙁🙁 ${err.message}, Try Again!`);
+    console.error(`Something Went Wrong 🙁🙁🙁 ${err.message}, Try Again!`);
     renderErrorMessage(
       `${err.message}, Try searching with some other keywords`
     );
@@ -98,21 +95,17 @@ const getRecipeById = async (recipeID) => {
   try {
     const baseUrl = `${recipeID}`;
     const response = await fetch(baseUrl);
-    console.log(response);
 
     if (!response.ok)
       throw new Error(`Something Went Wrong ${response.status}`);
 
     const data = await response.json();
-    console.log(data);
-    console.log(data.recipe);
 
     if (!data) throw new Error(`No Data Found`);
 
     generateRecipeDetail(data.recipe);
   } catch (err) {
-    console.error(err.message);
-    console.log(`Something Went Wrong 🙁🙁🙁 ${err.message}, Try Again!`);
+    console.error(`Something Went Wrong 🙁🙁🙁 ${err.message}, Try Again!`);
     renderErrorRecipeID(`${err.message}, Try Again!`);
   }
 };
@@ -226,7 +219,6 @@ const renderErrorRecipeID = (msg) => {
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   searchQuery = e.target.querySelector("input").value;
-  console.log(searchQuery);
 
   getRecipes();
 });
@@ -234,14 +226,12 @@ searchForm.addEventListener("submit", (e) => {
 // Event Listener to get a particular Recipe
 searchResultList.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(e);
 
   const recipeInfo = e.target.parentNode;
   let recipeId = recipeInfo.classList.contains("list-group-item")
     ? recipeInfo.getAttribute("recipe-id")
     : "";
 
-  console.log(recipeId);
   getRecipeById(recipeId);
 });
 
