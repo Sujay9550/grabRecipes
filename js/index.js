@@ -33,7 +33,7 @@ const getRecipes = async () => {
     const data = await response.json();
 
     if (data.hits.length === 0)
-      throw new Error(`No Results Found For Your Query`);
+      throw new Error(`No results found for your query`);
 
     generateListHtml(data.hits);
   } catch (err) {
@@ -101,7 +101,7 @@ const getRecipeById = async (recipeID) => {
 
     const data = await response.json();
 
-    if (!data) throw new Error(`No Data Found`);
+    if (!data) throw new Error(`No data found`);
 
     generateRecipeDetail(data.recipe);
   } catch (err) {
