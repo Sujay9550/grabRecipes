@@ -123,3 +123,12 @@ body {
 .footer-container .credits {
   font-size: 14px;
 }
+
+.footer-container p {
+  margin: 0;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: #333;
+}
